@@ -71,11 +71,11 @@ try {
 		ric = () => new prom(_ric),
 		__downloadFile__ = async (blob, name = blob.name, headers, args) => {
 			let filename = prompt(
-				`Baxaindo arquivo com o seguinte nome, limpe para parar de baixar; está tudo certo?`,
+				`Baxaindo arquivo com o seguinte nome, limpe para parar de baixar; esta tudo certo?`,
 				(await blob, await name)
 			)
 			if (!filename)
-				throw new RangeError('Não é possivel baixar')
+				throw new RangeError('NÃ£o Ã© possivel baixar')
 			await _dl(await blob, await filename, await headers, await args)
 			return true
 		},
